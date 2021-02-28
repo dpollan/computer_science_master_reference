@@ -1,0 +1,7 @@
+Computer Science Master Reference
+
+Welcome to my Computer Science Master Reference repository.  As I continue learning more about coding and programming in general I frequently find it necessary to review past works and revisit basic CS concepts.  I originally considered keeping this as a private repo, but decided the benefit of exposing it far outweighed the cost.  Other people just starting their journey may find this useful and those much further along than myself might offer some guidance and best practices as they view my code.  So please do feel free to make pull requests if you stumble upon this repository and see a better way for me to accomplish the desired goal.  
+
+Essentially I envision this repository as something of a rosetta stone for whatever programming languages I learn.  I intend each subfolder to contain a reference to a particular concept with further subfolders containing a brief basic example in each programming language.  I frequently find myself saying, “well, I know how to do that in JavaScript, but I’m not too sure  how to do it in Python or C++”.  This repository is my answer to that problem, a place I can go to find whatever it is I need in whatever language I’m trying to learn.  
+
+Hopefully this proves useful to someone beyond myself and I truly hope others contribute and find value in my collection.  Also if there are any requests please send them my way and I’ll attempt to get them added as I slowly grow and maintain this repository.  Best of luck in your coding and may all your finished code compile with no errors!
