@@ -48,6 +48,8 @@ int main() {
     }
     std::cout << std::endl;
 
+    //-------------------COLLECTIONS MAP ---------------------------
+
     // Iterate through a collection
 
     std::cout << "Map" << std::endl;
