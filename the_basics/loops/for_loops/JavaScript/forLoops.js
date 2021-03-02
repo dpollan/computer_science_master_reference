@@ -36,7 +36,7 @@ console.log("array of numbers using forEach Array method")
 arrayOfNumbers.forEach( (number) => console.log(number)); //<--Output will also be 1 to 10
 console.log(lineBreak);
 
-
+//-------------------------COLLECTIONS OBJECTS ---------------------
 
 // Iterate through a collection
 console.log("collection of car make and models")
