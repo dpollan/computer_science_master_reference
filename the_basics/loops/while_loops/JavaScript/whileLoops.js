@@ -7,8 +7,8 @@ let guess = 0;
 let count = 0;
 
 while (i <= 20) {
-    console.log(i);  // <-- Output is 0 through 20
-    i++;
+  console.log(i); // <-- Output is 0 through 20
+  i++;
 }
 
 // Basic guessing game
@@ -18,9 +18,10 @@ number = Math.floor(20 * Math.random()); // <-- Picks a random number between 1 
 console.log(`Random Number: ${number}`);
 
 while (guess !== number) {
-    guess = Math.floor(20 * Math.random());
-    console.log(`Guess ${++count}: ${guess}`)
+  guess = Math.floor(20 * Math.random());
+  console.log(`Guess ${++count}: ${guess}`);
 }
 
-console.log(`Computer correctly guessed the number ${number} in ${count} tries`); 
-
+console.log(
+  `Computer correctly guessed the number ${number} in ${count} tries`
+);
