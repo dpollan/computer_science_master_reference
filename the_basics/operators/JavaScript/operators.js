@@ -10,7 +10,7 @@
 var num1, num2, str1, str2, result;
 
 // + Operator
-console.log("________________ Plus Operator ___________________");
+console.log("________________ Plus Operators ___________________");
 
 // Arithmetic Addition
 num1 = 7;
@@ -77,7 +77,7 @@ console.log('\nAssignment Operator Concatination: "Hello" += "World"');
 console.log(str1); // <-- "HelloWorld"
 
 // - Operator
-console.log("________________ Minus Operator ___________________");
+console.log("________________ Minus Operators ___________________");
 
 // Mathematical subtraction
 num1 = 7;
@@ -126,8 +126,10 @@ console.log("\nDecrement Operator Prepend Example: --7 * 2");
 console.log("Notice first we subtract one from 7, then do 6 * 2");
 console.log(result); //  <-- 12
 
-// Asterisk Operator
-console.log("________________________Asterisk Operator_______________________");
+// * Operator
+console.log(
+  "________________________  Asterisk Operators _______________________"
+);
 
 // Mathematical Multiplication
 num1 = 7;
@@ -157,9 +159,9 @@ num1 **= num2;
 console.log("\nAssignment Operator Exponentiation: 7 **= 5");
 console.log(num1); // <-- 16807
 
-// Forward Slash Operator
+// / Operator
 console.log(
-  "____________________________Forward Slash Operator___________________________________"
+  "____________________________ Forward Slash Operators ___________________________________"
 );
 
 // Mathematical Division
@@ -188,3 +190,91 @@ This also gets ignored
 multiple lines are ignored
 until we see an asterisk followed by a forward slash
 it is still part of the multi line comment */
+
+// % Operator
+console.log(
+  "____________________________ Percent Sign Operators ___________________________________"
+);
+
+// Modulus Operator
+
+// Modulus Operator basically gives you the remainder after division
+// This is frequently used to determine if evenly divisible or zero
+num1 = 42;
+num2 = 7;
+console.log("\nModulus Operator: 42 % 7");
+console.log(num1 % num2); // <-- 0
+
+// Modulus Operator is also frequently used to determine which bucket to put
+// Something in when using hash tables
+
+num1 = 79;
+num2 = 5;
+console.log("\nModulus Operator: 79 % 5"); // <-- 79 / 5 = 15.8, we only care about the remainder which is 4
+console.log(num1 % num2); // <-- 4
+
+// = Operator
+console.log("_____________________ Equal Sign Operators ______________");
+
+// Assignment Operator
+let x = 5;
+console.log("\nAssignment Operator: x = 5");
+console.log(x); // <-- 5
+
+// Equality Operator - double equal sign ==
+num1 = 5;
+num2 = "5";
+num3 = 9;
+console.log('\nEquality Operator: 5 == "5"'); // <-- Double Equal coerces the string "5" into the number 5
+console.log(num1 == num2); // <-- true
+
+console.log("\nEquality Operator: 5 == 9");
+console.log(num1 == num3); // <-- false
+
+// Strict Equality Operator - triple equal sign
+num1 = 5;
+num2 = "5";
+console.log('\nStrict Equality Operator: 5 === "5"'); // Tripple Equal does not coerce and gives you false
+console.log(num1 === num2); // <-- false
+
+// ! Operators
+console.log("______________ Exclaimation Point Operators ______________");
+
+// Not Operator
+bool1 = false;
+num1 = 7;
+string1 = "Hello";
+
+console.log("\nNot Operator: !false");
+console.log(!bool1); // <-- true
+
+console.log("\nNot Operator: !7");
+console.log(!num1); // <-- false
+
+console.log('\nNot Operator: !"Hello"');
+console.log(!string1);
+
+// Not Not Operator
+// By using double exclaimation points we can get the "truthiness" or "falseness" of any expression
+
+console.log("\nNot Not Operator: !!7");
+console.log(!!num1); // <-- true
+
+console.log('\nNot Not Operator: !!"Hello"');
+console.log(!!string1); // <-- true
+
+// Not Equal Operator
+num1 = 5;
+num2 = "5";
+num3 = 7;
+
+console.log("\nNot Equal Operator: 5 != 7");
+console.log(num1 != num3); // <-- true because 5 is not equal to seven
+
+// Like double equals, != coerces types so number five != string five results in false
+console.log('\nNot Equal Operator: 5 != "5"'); //<-- "5" is coerced to 5 meaning the valuess ARE equal
+console.log(num1 != num2); // <-- false because 5 is equal to 5
+
+// Strict Not Equal Operator
+console.log('\nStrict Not Equal Operator: 5 !=== "5"');
+console.log(num1 !== num2); // <-- true because number 5 is not equal to string "5"
