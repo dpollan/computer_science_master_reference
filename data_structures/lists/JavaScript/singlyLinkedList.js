@@ -54,7 +54,7 @@ class LinkedList {
       return current.data; // <-- Old head will be removed by garbage collection in JS
     }
 
-    // Traverse the list and remove target if it exists
+    // Traverse the list checking each node for the target and remove if it exists
     while (current !== this.tail) {
       // Look at the next item after current to see if it is the target
       if (current.next.data === target) {
@@ -70,14 +70,12 @@ class LinkedList {
     }
     return null; // <-- return null if item target is not found
   }
+  printList() {
+    let current = this.head;
+    while (current !== null) {
+      console.log(current.data);
+      current = current.next;
+    }
+    return true;
+  }
 }
-
-//populate LL for testing
-(() => {
-  ll = new LinkedList();
-  ll.insert(5);
-  ll.insert(7);
-  ll.insert(9);
-  ll.insert(200);
-  ll.insert(900);
-})();
