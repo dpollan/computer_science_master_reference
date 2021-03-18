@@ -2,29 +2,27 @@
 
 Tree.prototype.complete = false;
 
-Tree.prototype.breadthFirstSearch = function (target, node) {
-  this.complete = false;
-  let current = node ? node : this.root;
-  console.log(`Checking ${current.name}`); // <--- prints the node we are currently looking at, order for treeExample.js for BFS should be A-B-C-D-E-F-G-H searching for value 70
-  if (current.data === target) {
-    console.log(`Value ${target} found at ${current.name}`);
-    this.complete = true;
+Tree.prototype.breadthFirstSearch = function (target) {
+  var q = new Queue();
+  q.enqueue(this.root);
+  this.found = false;
+  while (q.size()) {
+    current = q.dequeue();
+    console.log(`Checking ${current.name}`);
+    if (current.data === target) {
+      console.log(`Value ${target} found at ${current.name}`);
+      this.found = true;
+      break;
+    }
+    current.children.forEach((childNode) => {
+      q.enqueue(childNode);
+    });
+  }
+  if (this.found) {
+    delete this.found;
     return true;
   }
-  for (let i = 0; i < current.children.length; i++) {
-    if (this.complete) {
-      break;
-    }
-    console.log(`Checking ${current.children[i].name}`);
-    if (current.children[i].data === target) {
-      console.log(`Value ${target} found at ${current.children[i].name}`);
-      this.complete = true;
-    }
-  }
-  for (let j = 0; j < current.children.length; j++) {
-    if (this.complete) {
-      break;
-    }
-    this.breadthFirstSearch(target, current.children[j]);
-  }
+  delete this.found;
+  console.log(`${target} was not found in the Tree`);
+  return false;
 };
