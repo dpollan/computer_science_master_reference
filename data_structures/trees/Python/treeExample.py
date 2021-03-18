@@ -1,0 +1,16 @@
+t = Tree(10, "a")
+
+a = t.root
+b = a.add_child(20, "b")
+c = a.add_child(30, "c")
+d = b.add_child(35, "d")
+e = b.add_child(40, "e")
+f = b.add_child(50, "f")
+g = c.add_child(60, "g")
+h = c.add_child(70, "h")
+i = g.add_child(80, "i")
+j = g.add_child(90, "j")
+k = g.add_child(100, "k")
+l = g.add_child(110, "l")
+m = h.add_child(120, "m")
+n = h.add_child(130, "n")
