@@ -15,11 +15,7 @@ class Vertex {
   addEdge(target) {
     let distance = this.calculateDistance(target);
     this.edges.push([this.name, target.name, distance]);
-    console.log(
-      `Edge ${this.name} to ${
-        target.name
-      } added with distance of ${this.calculateDistance(target)}`
-    );
+    //console.log(`Edge ${this.name} to ${target.name} added with distance of ${this.calculateDistance(target)}`);
   }
 }
 
