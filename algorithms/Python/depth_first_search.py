@@ -13,7 +13,6 @@ def depth_first_search(self, target, node=None):
         return True
     for child_node in current.children:
         if self.found == True:
-            del self.found
             break
         self.depth_first_search(target, child_node)
 
