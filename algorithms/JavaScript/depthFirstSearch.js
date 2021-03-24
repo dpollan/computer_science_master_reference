@@ -62,6 +62,8 @@ Graph.prototype.depthFirstSearch = function (startLocation, target) {
     delete this.found;
     return true;
   }
-  console.log(`${target} was not found on the Graph`);
+  console.log(
+    `${target} was not found on the Graph or is unreachable from ${startLocation}`
+  );
   return false;
 };
