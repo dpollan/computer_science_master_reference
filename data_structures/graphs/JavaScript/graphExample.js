@@ -2,7 +2,7 @@ g = new Graph();
 
 g.addVertex("a", 3, 3);
 g.addVertex("b", 7, 8);
-g.addVertex("c", 12, 0);
+g.addVertex("c", 12, 1);
 g.addVertex("d", 6, 5);
 g.addVertex("e", 2, 9);
 g.addVertex("f", 1, 6);

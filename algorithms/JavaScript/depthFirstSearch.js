@@ -2,20 +2,37 @@
 
 Tree.prototype.complete = false;
 
-Tree.prototype.depthFirstSearch = function (target, node) {
+Tree.prototype.depthFirstSearch = function (target) {
+  var s = new Stack();
+  s.push(this.root);
   this.found = false;
-  let current = node ? node : this.root;
-  console.log(`Checking ${current.name}`); // <--- prints the node we are currently looking at, order for treeExample.js for DFS should be A-B-D-E-F-C-G-I-J-K-L-H searching for 70
-  if (current.data === target) {
-    console.log(`Value ${target} found at ${current.name}`);
-    this.found = true;
-    return true;
-  }
-  for (let i = 0; i < current.children.length; i++) {
-    if (this.found) {
-      delete this.found;
+  while (s.size()) {
+    let current = s.pop();
+    console.log(`Checking ${current.name}`);
+    if (current.data === target) {
+      console.log(`Value ${target} found at ${current.name}`);
+      this.found = true;
       break;
     }
-    this.depthFirstSearch(target, current.children[i]);
+    for (
+      let childNode = current.children.length - 1;
+      childNode >= 0;
+      --childNode
+    ) {
+      if (!current.children.length) {
+        break;
+      }
+      s.push(current.children[childNode]);
+    }
   }
+  if (this.found) {
+    delete this.found;
+    return true;
+  }
+  console.log(`${target} was not found in the Tree`);
+  return false;
 };
+
+// Basic Depth First Search Algorithm added as method for Graph
+
+Graph.prototype.depthFirstSearch = function (target, vertex) {};
