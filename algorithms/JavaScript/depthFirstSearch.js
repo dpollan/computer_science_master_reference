@@ -35,4 +35,33 @@ Tree.prototype.depthFirstSearch = function (target) {
 
 // Basic Depth First Search Algorithm added as method for Graph
 
-Graph.prototype.depthFirstSearch = function (target, vertex) {};
+Graph.prototype.depthFirstSearch = function (startLocation, target) {
+  var s = new Stack();
+  var history = {};
+  history[startLocation] = true;
+  s.push(this.verts[startLocation]);
+  while (s.size()) {
+    let current = s.pop();
+    history[current.name] = true;
+    console.log(`Checking ${current.name}`);
+    if (current.name === target) {
+      console.log(`Target ${target} found at ${current.xpos}, ${current.ypos}`);
+      this.found = true;
+      break;
+    }
+    current.edges.forEach((edge) => {
+      let ajacentVertex = edge[1];
+      if (history[ajacentVertex]) {
+        null;
+      } else {
+        s.push(this.verts[ajacentVertex]);
+      }
+    });
+  }
+  if (this.found) {
+    delete this.found;
+    return true;
+  }
+  console.log(`${target} was not found on the Graph`);
+  return false;
+};
