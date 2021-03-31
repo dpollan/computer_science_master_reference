@@ -45,4 +45,7 @@ class PriorityQueue {
     let highestPriorityItem = this.data.pop();
     return highestPriorityItem.item;
   }
+  size() {
+    return this.data.length;
+  }
 }
